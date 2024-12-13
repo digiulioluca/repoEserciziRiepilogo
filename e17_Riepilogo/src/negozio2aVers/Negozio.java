@@ -16,8 +16,12 @@ public class Negozio {
 		 */
 		System.out.println("Selezione quanti prodotti vuoi inserire: ");
 		int num = scanner.nextInt();
+		
+		if (num<0) {
+			num = num*(-1);
+		}
 
-		System.out.println("INPUT PRODOTTI");
+		System.out.println("INPUT DI "+num+" PRODOTTI");
 		for (int c = 1; c <= num; c++) {
 			Prodotto prod = new Prodotto();
 			scanner.nextLine();
@@ -29,6 +33,9 @@ public class Negozio {
 			prod.setCategoria(categoria);
 			System.out.println("Inserisci prezzo prodotto " + c + ": ");
 			double prezzo = scanner.nextDouble();
+			if (prezzo<0) {
+				prezzo=prezzo*(-1);
+			}
 			prod.setPrezzo(prezzo);
 			// aggiunta nell'ArrayList
 			lista.add(prod);
