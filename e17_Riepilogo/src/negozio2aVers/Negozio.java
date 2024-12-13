@@ -17,6 +17,7 @@ public class Negozio {
 		System.out.println("Selezione quanti prodotti vuoi inserire: ");
 		int num = scanner.nextInt();
 		
+		// soluzione pigra per i numeri negativi
 		if (num<0) {
 			num = num*(-1);
 		}
@@ -68,6 +69,9 @@ public class Negozio {
 	}
 
 	public void stampaLista() {
+		/* stampo la lista di tutti i prodotti del negozio:
+		 * se la lista è vuota, stampare il seguente messaggio
+		 */
 		if (lista.isEmpty()) {
 			System.out.println("Lista vuota.");
 		} else {
@@ -78,6 +82,7 @@ public class Negozio {
 	}
 
 	public void menuNegozio(Scanner scanner) {
+		// menù negozio/gestore regolato da un do-while e da uno switch case
 		int scelta = 1;
 		do {
 			System.out.println("MENU' NEGOZIO: \n1) Aggiungi prodotti" + "\n2) Filtra per categoria\n"

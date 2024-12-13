@@ -21,6 +21,7 @@ import filtraggio.Prodotto;
 public class Main {
 	
 	static void menu(Scanner scanner, ArrayList<Prodotto> prod, Carrello carr1, Negozio neg1) {
+		// menù negozio/gestore regolato da un do-while e da uno switch case
 		int scelta = 1;
 		
 		do {
@@ -68,8 +69,6 @@ public class Main {
 		scanner.close();
 		
 		System.exit(0);
-
-
 	}
 
 }
